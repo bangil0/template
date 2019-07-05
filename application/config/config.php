@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_url'] = '';
 // Dynamic & Clean Base Url
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http"); // Decide Http or Https
-$config['base_url'] .= "://".$_SERVER['HTTP_HOST']; // Add Server host name for like Apache, Nginx or LiteSpeed.
-$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']); // add script name
+$config['base_url'] .= "://" . $_SERVER['HTTP_HOST']; // Add Server host name for like Apache, Nginx or LiteSpeed.
+$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']); // add script name
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ $config['index_page'] = '';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']    = 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'indonesian';
+$config['language']    = 'indonesian';
 
 /*
 |--------------------------------------------------------------------------
@@ -140,7 +140,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = 'vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -404,11 +404,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_prefix']    = '';
+$config['cookie_domain']    = '';
+$config['cookie_path']        = '/';
+$config['cookie_secure']    = FALSE;
+$config['cookie_httponly']     = FALSE;
 
 /*
 |--------------------------------------------------------------------------

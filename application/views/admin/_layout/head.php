@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -64,18 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
+	<!-- css for specified page -->
+	<?php if ($css) $this->load->view($css); ?>
 </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to Admin Controller!</h1>
-
-	<div id="body">
-		<p>This is admin page. <a href="<?=logout_url()?>">Logout</a> </p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
-</body>
-</html>

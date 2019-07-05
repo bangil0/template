@@ -1,20 +1,26 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends MY_Controller {
-	
+class Home extends MY_Controller
+{
+
 	function __construct()
-    {
+	{
 		parent::__construct();
-		
+
 		//If wanna specified who want to see this page
 	}
-	
+
 	function index()
 	{
-		$user = $orm->user->include("pegawai")->getData(array("id_data" => "data"));
+		//Intialize variabel to store data
+        $data_view = array();
+		// $data_view['datefilter'] = true; if there are filter by date range
 
-		$this->load->view('admin/admin_message');
+		//Generate View
+		$this->uview->builder($data_view, 'home', 'admin');
+
+		// $this->load->view('admin/admin_message');
 	}
 
 	function about()
