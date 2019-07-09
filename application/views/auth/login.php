@@ -1,6 +1,6 @@
       <div class="container">
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-          <?=form_open('auth/login', array('class' => 'col s12'))?>
+          <?=form_open('auth/login' . $returnString, array('class' => 'col s12'))?>
             <?=($this->session->flashdata('failed') ? '<div><b>'.$this->session->flashdata('failed').'</b></div>' : '')?>
             <div class='row'>
               <div class='input-field col s12'>
@@ -25,7 +25,7 @@
                     <a class='pink-text' href='<?=site_url('auth/forgot')?>'><b>Forgot Password?</b></a>
                   </label>
               </div>
-              
+
               <!-- <label style='float: right;'>
 								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
 							</label> -->
