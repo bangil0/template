@@ -1,0 +1,6 @@
+[submodule "application/libraries/l_uview"]
+	path = application/libraries/l_uview
+	url = https://github.com/upanastudio/uview
+[submodule "application/libraries/l_uauth"]
+	path = application/libraries/l_uauth
+	url = https://github.com/upanastudio/uauth
